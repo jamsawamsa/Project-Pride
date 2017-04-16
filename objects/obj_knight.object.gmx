@@ -29,6 +29,8 @@
 knightSpeed = 10;
 knightWidth = sprite_width;
 
+
+
 </string>
           </argument>
         </arguments>

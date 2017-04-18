@@ -13,8 +13,8 @@
     <sprite>sprites\spr_squareKnight</sprite>
     <sprite>sprites\spr_powerUp</sprite>
     <sprite>sprites\spr_knightTest</sprite>
-    <sprite>sprites\spr_ladder</sprite>
     <sprite>sprites\spr_grassTile</sprite>
+    <sprite>sprites\spr_ladder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

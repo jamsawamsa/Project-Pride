@@ -26,13 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize variables
+state = e_state.idle;
 dir = -1;
 moveSpeed = 2;
 grav = 0.35;
 hSpd = 0;
 vSpd = 0;
-hitBoxWidth = 22;
-hitBoxHeight = 36;
+//hitBoxWidth = 22;
+//hitBoxHeight = 36;
+hitBoxWidth = sprite_width;
+hitBoxHeight = sprite_height;
 fearOfHeight = 0;
 </string>
           </argument>

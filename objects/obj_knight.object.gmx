@@ -26,11 +26,76 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize variables
-knightSpeed = 10;
-knightWidth = sprite_width;
+//image_speed = 1/30;
+state = states.normal;
+
+grav = 0.3;
+
+// current horizontal and vertical speed
+hSpd = 0;
+vSpd = 0;
+
+// jumpSpeed = 7;
+jumpSpeedNormal = 7;
+jumpSpeedPowerUp = 14;
+
+jumpSpeed = jumpSpeedNormal;
+moveSpeed = 3;
 
 
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Handle power down
+jumpSpeed = jumpSpeedNormal;
+sprite_index = spr_knightTest;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>switch (state) {
+    case states.normal: scr_playerNormal(); break;
+    case states.ladder: scr_playerLadder(); break;
+}
 </string>
           </argument>
         </arguments>
@@ -54,7 +119,7 @@ knightWidth = sprite_width;
           <argument>
             <kind>1</kind>
             <string>/// Move right
-x = x + knightSpeed;
+//x = x + knightSpeed;
 </string>
           </argument>
         </arguments>
@@ -78,7 +143,7 @@ x = x + knightSpeed;
           <argument>
             <kind>1</kind>
             <string>/// Move left
-x = x - knightSpeed;
+//x = x - knightSpeed;
 </string>
           </argument>
         </arguments>

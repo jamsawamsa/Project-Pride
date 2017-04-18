@@ -9,11 +9,22 @@
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_knight</sprite>
     <sprite>sprites\spr_tile</sprite>
+    <sprite>sprites\spr_monster</sprite>
+    <sprite>sprites\spr_squareKnight</sprite>
+    <sprite>sprites\spr_powerUp</sprite>
+    <sprite>sprites\spr_knightTest</sprite>
+    <sprite>sprites\spr_ladder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_mainMenuOptions.gml</script>
+    <scripts name="playerScripts">
+      <script>scripts\scr_playerGetInputs.gml</script>
+      <script>scripts\scr_playerNormal.gml</script>
+      <script>scripts\scr_playerCollideMove.gml</script>
+      <script>scripts\scr_playerLadder.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_mainMenuOptions</font>
@@ -21,9 +32,15 @@
   <objects name="objects">
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_knight</object>
+    <object>objects\obj_monster</object>
+    <object>objects\obj_monster_no_fall</object>
+    <object>objects\obj_tile</object>
+    <object>objects\obj_powerUp</object>
+    <object>objects\obj_ladder</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>

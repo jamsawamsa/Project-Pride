@@ -20,6 +20,7 @@
   <width>28</width>
   <height>42</height>
   <frames>
-    <frame index="0">images\spr_knight_0.png</frame>
+    <frame index="0">images\spr_knightWalk_0.png</frame>
+    <frame index="1">images\spr_knightWalk_1.png</frame>
   </frames>
 </sprite>

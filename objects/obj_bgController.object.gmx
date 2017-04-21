@@ -29,11 +29,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_xview*0.7</string>
+            <string>view_xview*0.9</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_yview*0.7</string>
+            <string>view_yview*0.9</string>
           </argument>
           <argument>
             <kind>3</kind>
@@ -61,7 +61,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_xview*0.9</string>
+            <string>view_xview*0.7</string>
           </argument>
           <argument>
             <kind>0</kind>

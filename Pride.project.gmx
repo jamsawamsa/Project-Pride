@@ -49,7 +49,7 @@
     <object>objects\obj_tile</object>
     <object>objects\obj_powerUp</object>
     <object>objects\obj_ladder</object>
-    <object>objects\obj_backgroundTest</object>
+    <object>objects\obj_bgController</object>
     <object>objects\obj_bg</object>
   </objects>
   <rooms name="rooms">

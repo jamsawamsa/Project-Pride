@@ -15,8 +15,14 @@
     <sprite>sprites\spr_knightTest</sprite>
     <sprite>sprites\spr_grassTile</sprite>
     <sprite>sprites\spr_ladder</sprite>
+    <sprite>sprites\spr_knightBasicAttack1</sprite>
+    <sprite>sprites\spr_knightWalk</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_level1Stars</background>
+    <background>background\bg_level1Mountain</background>
+    <background>background\bg_testLevel1</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_mainMenuOptions.gml</script>
@@ -25,6 +31,11 @@
       <script>scripts\scr_playerNormal.gml</script>
       <script>scripts\scr_playerCollideMove.gml</script>
       <script>scripts\scr_playerLadder.gml</script>
+    </scripts>
+    <scripts name="enemyScripts">
+      <script>scripts\scr_enemyIdle.gml</script>
+      <script>scripts\scr_enemyChase.gml</script>
+      <script>scripts\scr_enemyCollideMove.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -38,6 +49,8 @@
     <object>objects\obj_tile</object>
     <object>objects\obj_powerUp</object>
     <object>objects\obj_ladder</object>
+    <object>objects\obj_backgroundTest</object>
+    <object>objects\obj_bg</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

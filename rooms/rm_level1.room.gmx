@@ -543,7 +543,7 @@
     <instance objName="obj_tile" x="64" y="1440" name="inst_E8F1B080" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile" x="32" y="1440" name="inst_53117068" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile" x="0" y="1440" name="inst_6BEC0BCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bgController" x="256" y="384" name="inst_2D53597A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rmController" x="256" y="384" name="inst_2D53597A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="par_enemy" x="384" y="576" name="inst_868F3973" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

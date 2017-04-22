@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\bgm_level1</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_knight</sprite>
@@ -53,7 +55,7 @@
     <object>objects\obj_tile</object>
     <object>objects\obj_powerUp</object>
     <object>objects\obj_ladder</object>
-    <object>objects\obj_bgController</object>
+    <object>objects\obj_rmController</object>
     <object>objects\obj_bg</object>
     <object>objects\obj_hitBox</object>
   </objects>

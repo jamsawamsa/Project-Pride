@@ -18,7 +18,7 @@ else if (hSpd < 0) {
 if (place_meeting(x, y+1, obj_tile)) {
     if (move != 0) {
         sprite_index = spr_knightWalk;
-        image_speed = 1/20;
+        image_speed = 1/10;
     } else {
         sprite_index = spr_knight
     }

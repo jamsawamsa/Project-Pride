@@ -3,19 +3,14 @@
   <caption></caption>
   <width>2560</width>
   <height>1600</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>0</showcolour>
-  <code>enum states {
-    normal,
-    ladder
-}
-
-enum e_state {
+  <code>enum e_state {
     idle,
     chase
 }</code>
@@ -413,8 +408,8 @@ enum e_state {
     <instance objName="obj_tile" x="1504" y="448" name="inst_8FFEE104" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile" x="1536" y="448" name="inst_B16FCAFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile" x="1568" y="448" name="inst_2CF0AEAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_knight" x="32" y="480" name="inst_44B1E22B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_monster" x="160" y="896" name="inst_32FC68E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_knight" x="48" y="464" name="inst_44B1E22B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="par_enemy" x="160" y="896" name="inst_32FC68E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monster_no_fall" x="672" y="864" name="inst_EAB31CE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monster_no_fall" x="480" y="800" name="inst_549CCE03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile" x="512" y="864" name="inst_3BBEF5EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -549,6 +544,7 @@ enum e_state {
     <instance objName="obj_tile" x="32" y="1440" name="inst_53117068" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile" x="0" y="1440" name="inst_6BEC0BCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bgController" x="256" y="384" name="inst_2D53597A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="par_enemy" x="384" y="576" name="inst_868F3973" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

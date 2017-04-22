@@ -28,7 +28,7 @@
             <string>/// Initialize variables
 state = e_state.idle;
 dir = -1;
-moveSpeed = 2;
+moveSpeed = 1;
 grav = 0.35;
 hSpd = 0;
 vSpd = 0;
@@ -36,7 +36,16 @@ vSpd = 0;
 //hitBoxHeight = 36;
 hitBoxWidth = sprite_width;
 hitBoxHeight = sprite_height;
+
+// animations
+image_speed = 0;
+image_index = 0;
+
+// whether they are afraid of ledges
 fearOfHeight = 0;
+
+// whether monster is hit
+hit = 0;
 </string>
           </argument>
         </arguments>

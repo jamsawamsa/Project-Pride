@@ -11,7 +11,7 @@ if (keyJump) || (!place_meeting(x, y, obj_ladder)) {
     hSpd = 0;
     vSpd = 0;
     state = states.normal;
-    if ((keyJump) && (keyLeft)) || ((keyJump) && (keyRight)) {
+    if ((keyJump) && (-keyLeft)) || ((keyJump) && (keyRight)) {
         move = keyRight + keyLeft;
         hSpd = move * moveSpeed;
         if (vSpd < 10) vSpd += grav;

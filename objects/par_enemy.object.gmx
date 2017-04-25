@@ -26,6 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize variables
+// states
+enum e_state {
+    idle,
+    chase,
+    attack,
+    hit
+}
+
 state = e_state.idle;
 dir = -1;
 moveSpeed = 1;
@@ -44,8 +52,50 @@ image_index = 0;
 // whether they are afraid of ledges
 fearOfHeight = 0;
 
+// whether the monster is in attack range
+inAttackRange = 0;
+
 // whether monster is hit
 hit = 0;
+
+// stats
+hp = 50; // hit points
+atk = 0; // attack
+
+// animation frame vars
+atkAnimSpd = 0; // attack animation speed
+firstKeyFrame = -1; // first key frame of attack
+lastKeyFrame = -1; // last key frame of attack
+atkSpr = -1; // sprite for the attack animation, -1 is null when initialised
+hitBoxSpr = -1; // sprite of the hitbox
+
+// alarms
+atkCooldown = 3 * room_speed; // how many seconds before the next attack can be performed
+canAtk = 1; // whether the monster is ready to attack 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Set the monster to be ready to attack
+canAtk = 1;
 </string>
           </argument>
         </arguments>
@@ -69,9 +119,13 @@ hit = 0;
           <argument>
             <kind>1</kind>
             <string>/// Handle behaviour
+if (hp &lt;= 0) instance_destroy();
+
 switch (state) {
     case e_state.idle: scr_enemyIdle(); break;
     case e_state.chase: scr_enemyChase(); break;
+    case e_state.attack: enemyAttack_scr(firstKeyFrame, lastKeyFrame, atk, atkAnimSpd, atkSpr, hitBoxSpr); break;
+    case e_state.hit: enemyHit_scr(); break;
 }
 
 

@@ -21,6 +21,16 @@
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_hitBoxKnight</sprite>
     <sprite>sprites\spr_knightBasicAtk1</sprite>
+    <sprite>sprites\spr_enemyMogulold</sprite>
+    <sprites name="Monsters">
+      <sprite>sprites\spr_enemyMogul</sprite>
+      <sprite>sprites\spr_mogulAttack</sprite>
+      <sprite>sprites\mogulAtkHitBox_spr</sprite>
+    </sprites>
+    <sprite>sprites\spr_knightJump</sprite>
+    <sprite>sprites\spr_guiBar</sprite>
+    <sprite>sprites\spr_lifeBar</sprite>
+    <sprite>sprites\spr_xpBar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_level1Stars</background>
@@ -41,23 +51,32 @@
       <script>scripts\scr_enemyIdle.gml</script>
       <script>scripts\scr_enemyChase.gml</script>
       <script>scripts\scr_enemyCollideMove.gml</script>
+      <script>scripts\enemyAttack_scr.gml</script>
+      <script>scripts\enemyHit_scr.gml</script>
     </scripts>
     <script>scripts\fn_approach.gml</script>
+    <script>scripts\guiBar_scr.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_mainMenuOptions</font>
+    <font>fonts\fnt_dmg</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_knight</object>
     <object>objects\par_enemy</object>
-    <object>objects\obj_monster_no_fall</object>
+    <object>objects\obj_mogul</object>
     <object>objects\obj_tile</object>
+    <object>objects\obj_test</object>
     <object>objects\obj_powerUp</object>
     <object>objects\obj_ladder</object>
     <object>objects\obj_rmController</object>
     <object>objects\obj_bg</object>
     <object>objects\obj_hitBox</object>
+    <object>objects\obj_damage</object>
+    <object>objects\player_par</object>
+    <object>objects\guiBar_obj</object>
+    <object>objects\hitBox_par</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

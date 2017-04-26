@@ -31,6 +31,7 @@
     <sprite>sprites\spr_guiBar</sprite>
     <sprite>sprites\spr_lifeBar</sprite>
     <sprite>sprites\spr_xpBar</sprite>
+    <sprite>sprites\nekros_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_level1Stars</background>
@@ -77,6 +78,8 @@
     <object>objects\player_par</object>
     <object>objects\guiBar_obj</object>
     <object>objects\hitBox_par</object>
+    <object>objects\nekros_obj</object>
+    <object>objects\enemySpawner_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

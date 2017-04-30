@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize variables
-//image_speed = 1/30;
 enum states {
     normal,
     ladder,
@@ -49,6 +48,7 @@ jumpSpeedPowerUp = 14;
 jumpSpeed = jumpSpeedNormal;
 moveSpeed = 3;
 
+// animation frame rate
 image_speed = 1/10;
 
 // stats
@@ -107,7 +107,8 @@ sprite_index = spr_knightTest;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (hit!= 0) hit = fn_approach(hit, 0, 0.05); 
+            <string>// invulnerability mechanic, needs to be cleaned and updated
+if (hit!= 0) hit = fn_approach(hit, 0, 0.05); 
 
 switch (state) {
     case states.normal: scr_playerNormal(); break;

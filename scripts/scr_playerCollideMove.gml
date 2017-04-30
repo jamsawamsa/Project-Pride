@@ -19,7 +19,7 @@ if (place_meeting(x, y + vSpd, obj_tile)) {
 }
 y += vSpd;
 
-// handle image flips, not yet pixel perfect when accounting for even width sprites
+// handle image flips
 if (hSpd  > 0) {
     image_xscale = 1;
 }

@@ -11,8 +11,8 @@ if (place_meeting(x, y + 1, obj_tile)) {
 }
 
 if (place_meeting(x, y + 1, obj_tile) && keyQ) {
-    vSpd = fn_approach(vSpd, 0, frc);
-    hSpd = fn_approach(hSpd, 0, frc);
+    //vSpd = fn_approach(vSpd, 0, frc);
+    //hSpd = fn_approach(hSpd, 0, frc);
     state = states.q;
 }
 

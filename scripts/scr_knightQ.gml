@@ -9,7 +9,7 @@ image_speed = 1/5;
 sprite_index = spr_knightBasicAtk1;
 
 //Sound effects
-playSound_scr(slash_snd);
+// playSound_scr(slash_snd);
 
 
 //Hitbox 
@@ -22,6 +22,11 @@ if ((image_index >= 2) && (image_index <= 3)) // check if attack is within key f
         damage = round(other.strength * .9 * chance); // apply dmg rng
         with(instance_place(x, y, par_enemy)) { 
             if(hit == 0) { // If monster currently not hit
+                if (instance_exists(camera_obj)) {
+                    with(camera_obj) {
+                        screenShake = 1;
+                    }
+                }
                 hp -= other.damage; // Reduce monster's hp
                 hit = 1; // Change hit variable of monster
                 vSpd = -3; // Knockback into the air

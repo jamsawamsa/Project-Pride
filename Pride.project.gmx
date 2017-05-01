@@ -9,6 +9,7 @@
   <sounds name="sound">
     <sound>sound\bgm_level1</sound>
     <sound>sound\slash_snd</sound>
+    <sound>sound\knightHit_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Adventurers">
@@ -20,7 +21,7 @@
         <sprite>sprites\spr_knightJump</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\arrow_spr</sprite>
     <sprite>sprites\spr_monster</sprite>
     <sprite>sprites\spr_squareKnight</sprite>
     <sprite>sprites\spr_knightTest</sprite>
@@ -65,15 +66,15 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\autoTile_scr.gml</script>
-    <script>scripts\scr_mainMenuOptions.gml</script>
-    <scripts name="playerScripts">
+    <script>scripts\mainMenuOptions_scr.gml</script>
+    <scripts name="PlayerScripts">
       <script>scripts\scr_playerGetInputs.gml</script>
       <script>scripts\scr_playerNormal.gml</script>
       <script>scripts\scr_playerCollideMove.gml</script>
       <script>scripts\scr_playerLadder.gml</script>
       <script>scripts\scr_knightQ.gml</script>
     </scripts>
-    <scripts name="enemyScripts">
+    <scripts name="EnemyScripts">
       <script>scripts\scr_enemyIdle.gml</script>
       <script>scripts\scr_enemyChase.gml</script>
       <script>scripts\scr_enemyCollideMove.gml</script>
@@ -81,35 +82,42 @@
       <script>scripts\enemyHit_scr.gml</script>
       <script>scripts\enemyDestroy_scr.gml</script>
     </scripts>
-    <script>scripts\fn_approach.gml</script>
-    <script>scripts\guiBar_scr.gml</script>
-    <scripts name="globalScripts">
+    <scripts name="GlobalScripts">
       <script>scripts\playSound_scr.gml</script>
     </scripts>
+    <script>scripts\fn_approach.gml</script>
+    <script>scripts\guiBar_scr.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_mainMenuOptions</font>
     <font>fonts\fnt_dmg</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_mainMenu</object>
-    <object>objects\obj_knight</object>
-    <object>objects\par_enemy</object>
-    <object>objects\obj_mogul</object>
-    <object>objects\obj_tile</object>
-    <object>objects\par_tile</object>
+    <object>objects\mainMenu_obj</object>
+    <objects name="Player">
+      <object>objects\obj_knight</object>
+      <object>objects\player_par</object>
+    </objects>
     <object>objects\obj_powerUpItem</object>
-    <object>objects\obj_ladder</object>
-    <object>objects\obj_rmController</object>
-    <object>objects\obj_bg</object>
     <object>objects\obj_hitBox</object>
     <object>objects\obj_damage</object>
-    <object>objects\player_par</object>
-    <object>objects\guiBar_obj</object>
     <object>objects\hitBox_par</object>
-    <object>objects\nekros_obj</object>
-    <object>objects\enemySpawner_obj</object>
-    <object>objects\camera_obj</object>
+    <objects name="Enemies">
+      <object>objects\par_enemy</object>
+      <object>objects\nekros_obj</object>
+      <object>objects\obj_mogul</object>
+    </objects>
+    <objects name="Controllers">
+      <object>objects\camera_obj</object>
+      <object>objects\enemySpawner_obj</object>
+      <object>objects\obj_rmController</object>
+      <object>objects\guiBar_obj</object>
+    </objects>
+    <objects name="Environment">
+      <object>objects\obj_ladder</object>
+      <object>objects\obj_tile</object>
+      <object>objects\par_tile</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

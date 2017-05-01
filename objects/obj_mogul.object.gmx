@@ -72,7 +72,7 @@ hitBoxSpr = mogulAtkHitBox_spr;
           <argument>
             <kind>1</kind>
             <string>/// Switch back to idle sprite
-image_index = 0;
+if (image_index == 1) image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -120,9 +120,10 @@ state = e_state.attack;
           <argument>
             <kind>1</kind>
             <string>if (sprite_index == spr_mogulAttack) {
-    alarm[0] = atkCooldown;
+    alarm[0] = atkCooldown; // reset the atk cooldown
     canAtk = 0;
     sprite_index = spr_enemyMogul;
+    image_speed = 0;
     state = e_state.idle;
 }
 </string>

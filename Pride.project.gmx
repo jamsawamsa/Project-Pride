@@ -11,30 +11,51 @@
     <sound>sound\slash_snd</sound>
   </sounds>
   <sprites name="sprites">
+    <sprites name="Adventurers">
+      <sprites name="Knight">
+        <sprite>sprites\spr_knight</sprite>
+        <sprite>sprites\spr_knightWalk</sprite>
+        <sprite>sprites\spr_knightBasicAtk1</sprite>
+        <sprite>sprites\spr_hitBoxKnight</sprite>
+        <sprite>sprites\spr_knightJump</sprite>
+      </sprites>
+    </sprites>
     <sprite>sprites\spr_arrow</sprite>
-    <sprite>sprites\spr_knight</sprite>
-    <sprite>sprites\spr_tile</sprite>
     <sprite>sprites\spr_monster</sprite>
     <sprite>sprites\spr_squareKnight</sprite>
-    <sprite>sprites\spr_powerUp</sprite>
     <sprite>sprites\spr_knightTest</sprite>
-    <sprite>sprites\spr_grassTile</sprite>
     <sprite>sprites\spr_ladder</sprite>
-    <sprite>sprites\spr_knightWalk</sprite>
     <sprite>sprites\spr_test</sprite>
-    <sprite>sprites\spr_hitBoxKnight</sprite>
-    <sprite>sprites\spr_knightBasicAtk1</sprite>
-    <sprite>sprites\spr_enemyMogulHit</sprite>
-    <sprites name="Monsters">
-      <sprite>sprites\spr_enemyMogul</sprite>
-      <sprite>sprites\spr_mogulAttack</sprite>
-      <sprite>sprites\mogulAtkHitBox_spr</sprite>
+    <sprites name="Enemies">
+      <sprites name="Boss">
+        <sprites name="Nekros">
+          <sprite>sprites\nekros_spr</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="NonBoss">
+        <sprites name="Mogul">
+          <sprite>sprites\spr_enemyMogul</sprite>
+          <sprite>sprites\spr_mogulAttack</sprite>
+          <sprite>sprites\mogulAtkHitBox_spr</sprite>
+          <sprite>sprites\spr_enemyMogulHit</sprite>
+        </sprites>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_knightJump</sprite>
-    <sprite>sprites\spr_guiBar</sprite>
-    <sprite>sprites\spr_lifeBar</sprite>
-    <sprite>sprites\spr_xpBar</sprite>
-    <sprite>sprites\nekros_spr</sprite>
+    <sprites name="HUD">
+      <sprite>sprites\spr_guiBar</sprite>
+      <sprite>sprites\spr_lifeBar</sprite>
+      <sprite>sprites\spr_xpBar</sprite>
+    </sprites>
+    <sprites name="Environment">
+      <sprites name="Tiles">
+        <sprite>sprites\spr_tile</sprite>
+        <sprite>sprites\spr_grassTile</sprite>
+        <sprite>sprites\grassTile_spr</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Items">
+      <sprite>sprites\spr_powerUp</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_level1Stars</background>
@@ -43,6 +64,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\autoTile_scr.gml</script>
     <script>scripts\scr_mainMenuOptions.gml</script>
     <scripts name="playerScripts">
       <script>scripts\scr_playerGetInputs.gml</script>
@@ -75,7 +97,7 @@
     <object>objects\par_enemy</object>
     <object>objects\obj_mogul</object>
     <object>objects\obj_tile</object>
-    <object>objects\obj_test</object>
+    <object>objects\par_tile</object>
     <object>objects\obj_powerUpItem</object>
     <object>objects\obj_ladder</object>
     <object>objects\obj_rmController</object>

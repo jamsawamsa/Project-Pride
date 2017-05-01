@@ -8,6 +8,9 @@ vSpd = fn_approach(vSpd,0,frc);
 image_speed = 1/5;
 sprite_index = spr_knightBasicAtk1;
 
+//Sound effects
+playSound_scr(slash_snd);
+
 
 //Hitbox 
 if ((image_index >= 2) && (image_index <= 3)) // check if attack is within key frames

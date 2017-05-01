@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Define variables
+            <string>/// Define variables, randomize called here
+randomize()
 menu[0] = "Start";
-menu[1] = "Continue";
+menu[1] = "Go to rm_test";
 menu[2] = "Options";
 menu[3] = "Exit";
 

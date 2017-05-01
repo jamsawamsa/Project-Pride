@@ -35,7 +35,7 @@ if (instance_exists(player_par)) {
     spawnY = player_par.y -30;
     // spawn the monster
     spawn = instance_create(spawnX, spawnY, obj_mogul);
-    spawn.visible = false;
+    spawn.visible = true;
         with (spawn) {
             while !place_free(x, y) {
                 x = choose(irandom_range(-800, -256), irandom_range(256, 800)) &amp; ~ 31;

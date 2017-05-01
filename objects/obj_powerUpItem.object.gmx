@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_knight">
+    <event eventtype="4" ename="player_par">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_knight) {
-    jumpSpeed = jumpSpeedPowerUp;
-    sprite_index = spr_squareKnight;
-    alarm[0] = 300;
+            <string>with(player_par) {
+    strength *= 2;
 }
 
 instance_destroy();

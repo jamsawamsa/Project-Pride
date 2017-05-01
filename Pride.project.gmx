@@ -3,9 +3,12 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Developers Essential Audio Megapack</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sound>sound\bgm_level1</sound>
+    <sound>sound\slash_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_arrow</sprite>
@@ -21,7 +24,7 @@
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_hitBoxKnight</sprite>
     <sprite>sprites\spr_knightBasicAtk1</sprite>
-    <sprite>sprites\spr_enemyMogulold</sprite>
+    <sprite>sprites\spr_enemyMogulHit</sprite>
     <sprites name="Monsters">
       <sprite>sprites\spr_enemyMogul</sprite>
       <sprite>sprites\spr_mogulAttack</sprite>
@@ -54,9 +57,13 @@
       <script>scripts\scr_enemyCollideMove.gml</script>
       <script>scripts\enemyAttack_scr.gml</script>
       <script>scripts\enemyHit_scr.gml</script>
+      <script>scripts\enemyDestroy_scr.gml</script>
     </scripts>
     <script>scripts\fn_approach.gml</script>
     <script>scripts\guiBar_scr.gml</script>
+    <scripts name="globalScripts">
+      <script>scripts\playSound_scr.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_mainMenuOptions</font>
@@ -69,7 +76,7 @@
     <object>objects\obj_mogul</object>
     <object>objects\obj_tile</object>
     <object>objects\obj_test</object>
-    <object>objects\obj_powerUp</object>
+    <object>objects\obj_powerUpItem</object>
     <object>objects\obj_ladder</object>
     <object>objects\obj_rmController</object>
     <object>objects\obj_bg</object>
@@ -80,6 +87,7 @@
     <object>objects\hitBox_par</object>
     <object>objects\nekros_obj</object>
     <object>objects\enemySpawner_obj</object>
+    <object>objects\camera_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

@@ -3,6 +3,8 @@ if (hit != 0)
 {
     alarm[1] = -1
     image_index = 1;
+    image_speed = 0;
+    alarm[2] = 5;
     hit = fn_approach(hit,0,0.05);
 }
 else {
@@ -12,7 +14,5 @@ else {
     state = e_state.idle
     }
 }
-
-
 
 scr_enemyCollideMove();

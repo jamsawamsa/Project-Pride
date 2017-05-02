@@ -35,7 +35,7 @@
       </sprites>
       <sprites name="NonBoss">
         <sprites name="Mogul">
-          <sprite>sprites\spr_enemyMogul</sprite>
+          <sprite>sprites\mogul_spr</sprite>
           <sprite>sprites\spr_mogulAttack</sprite>
           <sprite>sprites\mogulAtkHitBox_spr</sprite>
           <sprite>sprites\spr_enemyMogulHit</sprite>
@@ -52,6 +52,12 @@
         <sprite>sprites\spr_tile</sprite>
         <sprite>sprites\spr_grassTile</sprite>
         <sprite>sprites\grassTile_spr</sprite>
+      </sprites>
+      <sprites name="Objects">
+        <sprites name="Altars">
+          <sprite>sprites\altarUnlit_spr</sprite>
+          <sprite>sprites\altarLit_spr</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Items">
@@ -117,6 +123,12 @@
       <object>objects\obj_ladder</object>
       <object>objects\obj_tile</object>
       <object>objects\par_tile</object>
+      <objects name="Objects">
+        <objects name="Altars">
+          <object>objects\altar_obj</object>
+          <object>objects\altar_par</object>
+        </objects>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

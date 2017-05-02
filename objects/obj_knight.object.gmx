@@ -51,6 +51,8 @@ moveSpeed = 3;
 // animation frame rate
 image_speed = 1/10;
 
+depth = 1000; // sprite depth
+
 // stats
 strength = 10
 hpMax = 200;

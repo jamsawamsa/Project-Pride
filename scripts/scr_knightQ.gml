@@ -27,7 +27,7 @@ if ((image_index >= 2) && (image_index <= 3)) // check if attack is within key f
                         screenShake = 1;
                     }
                 }
-                hp -= other.damage; // Reduce monster's hp
+                hpCurrent -= other.damage; // Reduce monster's hp
                 hit = 1; // Change hit variable of monster
                 vSpd = -3; // Knockback into the air
                 hSpd = sign(x - other.x) * 1.5;   // Set knockback speed

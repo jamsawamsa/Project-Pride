@@ -59,7 +59,9 @@ inAttackRange = 0;
 hit = 0;
 
 // stats
-hp = 50; // hit points
+hpMax = 50
+hpCurrent = 50; // hit points
+hpPercent = hpCurrent/hpMax * 100;
 atk = 0; // attack
 
 // animation frame vars
@@ -120,7 +122,8 @@ canAtk = 1;
             <kind>1</kind>
             <string>/// Handle behaviour
 // calls the destroy script when hp is equal to or less than 0
-if (hp &lt;= 0) enemyDestroy_scr();
+hpPercent = hpCurrent/hpMax * 100;
+if (hpCurrent &lt;= 0) enemyDestroy_scr();
 
 switch (state) {
     case e_state.idle: scr_enemyIdle(); break;

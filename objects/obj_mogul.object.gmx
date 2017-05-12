@@ -45,11 +45,13 @@ hpMax = 35;
 hpCurrent = 35;
 hpPercent = hpCurrent/hpMax * 100;
 atk = 8;
+atkRange = "melee";
+atkRangePix = 8;
 
 atkAnimSpd = 1/4;
 firstKeyFrame = 3;
 lastKeyFrame = 6;
-atkSpr = spr_mogulAttack;
+atkSpr = mogulAttack_spr;
 hitBoxSpr = mogulAtkHitBox_spr;
 
 
@@ -75,7 +77,7 @@ hitBoxSpr = mogulAtkHitBox_spr;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Switch back to idle sprite
+            <string>/// Switch back to idle sprite after getting hit
 if (image_index == 1) image_index = 0;
 </string>
           </argument>
@@ -123,12 +125,13 @@ state = e_state.attack;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (sprite_index == spr_mogulAttack) {
+            <string>if (sprite_index == mogulAttack_spr) {
     alarm[0] = atkCooldown; // reset the atk cooldown
-    canAtk = 0;
-    sprite_index = mogul_spr;
-    image_speed = 0;
-    state = e_state.idle;
+    canAtk = 0; //  monster can't atk for awhile
+    
+    sprite_index = mogul_spr; // change to normal sprite
+    image_speed = 0; 
+    state = e_state.idle; // resets state
 }
 </string>
           </argument>

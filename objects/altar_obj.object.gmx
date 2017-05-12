@@ -34,9 +34,49 @@ hpCurrent = 50;
 hpPercent = hpCurrent/hpMax *100;
 
 activate = 0; // boolean for activated state
-duration = 60 * room_speed; // duration which altar must survive before it activates
+complete = 0 // boolean if the altar trial has been successfully completed
+duration = 10; // duration which altar must survive before it activates
+duration = duration * room_speed;
+
+// pairing with the torch
+pairedObject = 0; // id of the torch paired with
+paired = 0; // bool if the altar has been paired with a torch
+altarTorchPair_scr(id, instance_find(torch_obj, 1)); // calls function to pair altar and torch
 
 depth = 2000; // sprite depth
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// checking to see if the altar survived for the duration of the trial
+if (hpCurrent &gt; 0 &amp;&amp; activate == 1) {
+    activate = 0;
+    complete = 1;
+    
+    if (paired == 1 &amp;&amp; pairedObject != noone) {
+        with(pairedObject) {
+            sprite_index = torchLit_spr;
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -61,7 +101,7 @@ depth = 2000; // sprite depth
             <kind>1</kind>
             <string>/// main logic
 hpPercent = hpCurrent/hpMax * 100;
-if (activate == 1) {
+if (activate == 1 &amp;&amp; complete != 1) {
     sprite_index = altarLit_spr;
     image_speed = 1/10;
 }

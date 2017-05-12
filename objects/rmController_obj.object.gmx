@@ -25,7 +25,75 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//audio_play_sound(bgm_level1, 100, true);
+            <string>/// Control room functions &amp; particle emitter
+// play bgm
+//audio_play_sound(bgm_level1, 100, true);
+
+// particle system
+leafPartSys = part_system_create();
+part_system_depth(leafPartSys, -1000);
+
+// creating the particle
+leaf = part_type_create();
+part_type_shape(leaf, pt_shape_snow);
+part_type_orientation(leaf, 200, 260, 0, 5, true);
+part_type_size(leaf, 0.1, 0.25, 0,0);
+part_type_speed(leaf, 1, 1.5, 0.05, 0.1);
+part_type_direction(leaf, 200, 260, 0, 2);
+part_type_life(leaf, 400, 600);
+
+// create paarticle emitter
+leafEmitter = part_emitter_create(leafPartSys);
+part_emitter_region(leafPartSys, leafEmitter, view_xview[0],view_xview[0] + view_wview[0]*2, view_yview[0] , view_yview[0]-  view_hview[0], ps_shape_ellipse, ps_distr_linear);
+part_emitter_stream(leafPartSys, leafEmitter, leaf, -16);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// destroy particle emitter
+part_system_destroy(leafPartSys);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// update particle emitter coordinates
+part_emitter_region(leafPartSys, leafEmitter, view_xview[0],view_xview[0] + view_wview[0]*2, view_yview[0] , view_yview[0]-  view_hview[0], ps_shape_ellipse, ps_distr_linear);
 </string>
           </argument>
         </arguments>

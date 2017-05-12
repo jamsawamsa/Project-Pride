@@ -25,11 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_knight)) {
-    hpMax = obj_knight.hpMax;
-    hp = obj_knight.hp;
-    xpMax = obj_knight.xpMax;
-    xp = obj_knight.xp;
+            <string>/// define variables
+hpMax = 100;
+hp = 100;
+xpMax = 100;
+xp = 0;
+
+// check if player exists
+if (instance_exists(player_par)) {
+    hpMax = player_par.hpMax;
+    hp = player_par.hp;
+    xpMax = player_par.xpMax;
+    xp = player_par.xp;
 }
 </string>
           </argument>
@@ -62,11 +69,12 @@ if (xp &gt;= xpMax)
 {
     xp = xpMax;
 }
-if(instance_exists(obj_knight)) {
-    hp = obj_knight.hp;
-    hpMax = obj_knight.hpMax;
-    xp = obj_knight.xp;
-    xpMax = obj_knight.xpMax;
+
+if(instance_exists(player_par)) {
+    hp = player_par.hp;
+    hpMax = player_par.hpMax;
+    xp = player_par.xp;
+    xpMax = player_par.xpMax;
 }
 </string>
           </argument>

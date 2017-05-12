@@ -1,6 +1,10 @@
-// enemyAttack_scr(firstKeyFrame, lastKeyFrame, atk, atkAnimSpd, atkSpr, hitBoxSpr)
+///  handles melee enemy attacks
+// enemyAttack_scr(firstKeyFrame, lastKeyFrame, atk, atkAnimSpd, atkSpr, hitBoxSpr, target)
 image_speed = argument3;
 sprite_index = argument4;
+// adjust attack direction
+dir = sign(player_par.x - x);
+image_xscale = dir;
 
 if ((image_index >= argument0) && (image_index <= argument1)) {
     with(instance_create(x, y, obj_hitBox)) {

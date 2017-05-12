@@ -29,8 +29,10 @@
 // states
 enum e_state {
     idle,
-    chase,
+    aggroPlayer,
+    aggroAltar,
     attack,
+    attackRanged,
     hit
 }
 
@@ -55,6 +57,8 @@ fearOfHeight = 0;
 // whether the monster is in attack range
 inAttackRange = 0;
 
+aggroRange = 96; // aggro acquisition range of monster
+
 // whether monster is hit
 hit = 0;
 
@@ -63,6 +67,8 @@ hpMax = 50
 hpCurrent = 50; // hit points
 hpPercent = hpCurrent/hpMax * 100;
 atk = 0; // attack
+atkRangePix = 8; // attack range in pixels, 8 for melee
+atkTangeType = "melee"; // attack range type, string format
 
 // animation frame vars
 atkAnimSpd = 0; // attack animation speed
@@ -72,7 +78,7 @@ atkSpr = -1; // sprite for the attack animation, -1 is null when initialised
 hitBoxSpr = -1; // sprite of the hitbox
 
 // alarms
-atkCooldown = 3 * room_speed; // how many seconds before the next attack can be performed
+atkCooldown = 1.5 * room_speed; // how many seconds before the next attack can be performed
 canAtk = 1; // whether the monster is ready to attack 
 </string>
           </argument>
@@ -127,9 +133,10 @@ if (hpCurrent &lt;= 0) enemyDestroy_scr();
 
 switch (state) {
     case e_state.idle: scr_enemyIdle(); break;
-    case e_state.chase: scr_enemyChase(); break;
+    case e_state.aggroPlayer: enemyAggroPlayer_scr(); break;
     case e_state.attack: enemyAttack_scr(firstKeyFrame, lastKeyFrame, atk, atkAnimSpd, atkSpr, hitBoxSpr); break;
     case e_state.hit: enemyHit_scr(); break;
+    case e_state.attackRanged: enemyShoot_scr(); break;
 }
 
 

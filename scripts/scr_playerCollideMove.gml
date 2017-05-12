@@ -24,8 +24,9 @@ if (hSpd  > 0) {
     image_xscale = 1;
 }
 else if (hSpd < 0) {
-    self.x += 1;
+    
     image_xscale = -1;
+    //self.x += 1;
 }
 
 // Animate

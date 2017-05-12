@@ -546,7 +546,7 @@
     <instance objName="nekros_obj" x="1344" y="784" name="inst_9F390C0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemySpawner_obj" x="112" y="64" name="inst_52F5A8F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="camera_obj" x="64" y="64" name="inst_DC65D29C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rmController" x="96" y="64" name="inst_B0FF7822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rmController_obj" x="96" y="64" name="inst_B0FF7822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

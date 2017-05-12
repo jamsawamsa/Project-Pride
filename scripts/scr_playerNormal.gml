@@ -23,6 +23,7 @@ if (place_meeting(x, y, altar_par) && keyF) {
     with(instance_place(x, y, altar_par)) {
         if (activate == 0) {
             activate  = 1;
+            alarm[0] = duration;
         }
         
     }

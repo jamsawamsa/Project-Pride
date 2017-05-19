@@ -74,6 +74,7 @@
     <sprites name="Test">
       <sprite>sprites\cameraTest_spr</sprite>
     </sprites>
+    <sprite>sprites\sprite30</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_level1Stars</background>

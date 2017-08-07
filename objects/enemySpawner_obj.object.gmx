@@ -26,27 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>/// Enemy spawners
-// Need to clean so that it spawns monsters only directly above floor tiles, in accessible places, in the view of the player and on a tile that is not currently occupied(?)
 if (instance_exists(player_par)) {
+
+    // If less than 6 enemies in the map
     if (instance_number(par_enemy) &lt; 6) {
-    // get random x
-    spawnX = choose(irandom_range(-512, -192), irandom_range(192, 512)) &amp; ~ 31;
-    spawnX += player_par.x;
-    spawnY = player_par.y -30;
-    // spawn the monster
-    spawn = instance_create(spawnX, spawnY, obj_mogul);
-    spawn.visible = true;
-        with (spawn) {
-            while !place_free(x, y) {
-                x = choose(irandom_range(-800, -256), irandom_range(256, 800)) &amp; ~ 31;
+        
+        // Choose monster to use
+        chosen_monster = chooseLevel1Monster_scr();
+        with(instance_create(player_par.x+irandom_range(-150,150), player_par.y, chosen_monster)) {
+            while ((!spawnFindFloor_scr()) || x &lt;=0 || x &gt;= room_width)  {
+                x = player_par.x + choose(irandom_range(-48,-150), irandom_range(48,150)) &amp; ~31;
             }
-            // find the floor
-            
-            
-            // check for collision with others
-            //if (!place_free(
-            
-            // set to visible again
+
         }
     }
 }

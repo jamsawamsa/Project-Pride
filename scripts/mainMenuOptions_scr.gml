@@ -13,6 +13,9 @@ switch (mpos) {
         room_goto(rm_level1);
         break;
     }
-    case 3: game_end(); break;
+    case 3: 
+        room_goto(tavern_rm); 
+        break;
+        //game_end(); break;
     default: break;
 }

@@ -74,7 +74,11 @@
     <sprites name="Test">
       <sprite>sprites\cameraTest_spr</sprite>
     </sprites>
-    <sprite>sprites\sprite30</sprite>
+    <sprite>sprites\misc_spr</sprite>
+    <sprite>sprites\barCounter_spr</sprite>
+    <sprites name="NPCs">
+      <sprite>sprites\tavernOwner_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_level1Stars</background>
@@ -103,14 +107,18 @@
     </scripts>
     <scripts name="GlobalScripts">
       <script>scripts\playSound_scr.gml</script>
+      <script>scripts\dialogText_scr.gml</script>
     </scripts>
     <script>scripts\fn_approach.gml</script>
     <script>scripts\guiBar_scr.gml</script>
     <script>scripts\altarTorchPair_scr.gml</script>
+    <script>scripts\spawnFindFloor_scr.gml</script>
+    <script>scripts\chooseLevel1Monster_scr.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_mainMenuOptions</font>
     <font>fonts\fnt_dmg</font>
+    <font>fonts\text_fnt</font>
   </fonts>
   <objects name="objects">
     <object>objects\mainMenu_obj</object>
@@ -131,6 +139,7 @@
     </objects>
     <objects name="Controllers">
       <object>objects\camera_obj</object>
+      <object>objects\enemySpawner_obj_old</object>
       <object>objects\enemySpawner_obj</object>
       <object>objects\rmController_obj</object>
       <object>objects\guiBar_obj</object>
@@ -147,8 +156,15 @@
         <objects name="Torches">
           <object>objects\torch_obj</object>
         </objects>
+        <objects name="Tavern Furniture">
+          <object>objects\barCounter_obj</object>
+        </objects>
       </objects>
     </objects>
+    <objects name="NPCs">
+      <object>objects\tavernOwner_obj</object>
+    </objects>
+    <object>objects\text_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
@@ -157,6 +173,9 @@
     <rooms name="ForestLvl1_rms">
       <room>rooms\forest_rm1_old</room>
       <room>rooms\forest_rm1</room>
+    </rooms>
+    <rooms name="Tavern">
+      <room>rooms\tavern_rm</room>
     </rooms>
   </rooms>
   <help>

@@ -46,10 +46,10 @@
 //    q
 //}
 
-state = states.normal;
+state = states.normal; // state
 
-grav = 0.3;
-frc = 0.4;
+grav = 0.3; // gravity
+frc = 0.4; // friction
 
 // current horizontal and vertical speed
 hSpd = 0;

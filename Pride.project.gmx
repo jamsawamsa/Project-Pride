@@ -79,6 +79,7 @@
     <sprites name="NPCs">
       <sprite>sprites\tavernOwner_spr</sprite>
     </sprites>
+    <sprite>sprites\test</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_level1Stars</background>
